@@ -1,98 +1,158 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curriculum</title>
+    <title>Mi Página - Licha</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: white;
+        }
+
+        nav {
+            background: #020617;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        .hero {
+            height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(135deg, #1e3a8a, #0ea5e9);
+        }
+
+        .hero h1 {
+            font-size: 3em;
+        }
+
+        .hero p {
+            margin-top: 10px;
+            opacity: 0.8;
+        }
+
+        .btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            background: white;
+            color: #0ea5e9;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #e2e8f0;
+        }
+
+        /* SECCIÓN */
+        .section {
+            padding: 50px;
+            text-align: center;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: #1e293b;
+            padding: 20px;
+            border-radius: 15px;
+            width: 250px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        footer {
+            background: #020617;
+            padding: 15px;
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            opacity: 0.7;
+        }
+    </style>
 </head>
 <body>
-    <main>
-        <section>
-            <div>
-                <h1>Curriculum Vitae</h1>
-                <hr>
-                <h2>Datos</h2>
-                <h3>Personales</h3>
-                <p>
-                    <b>Nombre: </b>Leandro Feraut<br>
-                    <b>Edad: </b>18<br>
-                    <b>DNI: </b>48035412<br>
-                    <b>Email: </b>ferautleandro@gmail.com<br>
-                </p>
-                <h3>Laborales</h3>
-                <p>
-                    <b>Lenguajes de programacion: </b>Python, Java, C, JavaScript<br>
-                    <b>Empleos anteriores:</b>
-                    <ul>
-                        <li>Heladero</li>
-                        <li>Coordinador de remiseria</li>
-                        <li>Repositor</li>
-                    </ul>
-                </p>
-                <h2>Academicos</h2>
-                <p>
-                    <b>Secundario:</b> Egresado en 2024 (Bachiller en Cs. Sociales)<br>
-                    <b>Universitario:</b> <ul>
-                        <li>Lic. en Informatica: 2025 - actualidad</li>
-                        <li>Tec. Universitaria en Tecnologias Web: 2026 - Actualidad</li>
-                    </ul>
-                </p>
+
+    <nav>
+        <a href="#">Inicio</a>
+        <a href="#sobre">Sobre mí</a>
+        <a href="#proyectos">Proyectos</a>
+    </nav>
+
+    <section class="hero">
+        <div>
+            <h1>Hola, soy Licha</h1>
+            <p>Mi primera página subida con GitHub Pages</p>
+            <button class="btn" onclick="alert('Todo funcionando de 10')">
+                Probar botón
+            </button>
+        </div>
+    </section>
+
+    <section class="section" id="sobre">
+        <h2>Sobre mí</h2>
+        <p>Estoy aprendiendo programación y desarrollo web.</p>
+    </section>
+
+    <section class="section" id="proyectos">
+        <h2>Mis proyectos</h2>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Página Web</h3>
+                <p>Mi primer sitio usando HTML y CSS.</p>
             </div>
-            <div>
-                <hr>
-                <h2>Perfil</h2>
-                <p>
-                    Soy estudiante de la Universidad Nacional del Oeste (UNO)<br>
-                    Complemento mis estudios con cursos fuera de la universidad<br>
-                    <b>Habilidades:</b>
-                    <ul>
-                        <li>Razonamiento logico</li>
-                        <li>Programacion en varios lenguajes</li>
-                        <li>Puntualidad</li>
-                        <li>Trabajo en equipo</li>
-                        <li>Responsabilidad</li>
-                    </ul>
-                </p>
-                <hr>
+
+            <div class="card">
+                <h3>Programación</h3>
+                <p>Ejercicios en Java y Python.</p>
             </div>
-            <div>
-                <h2>Hobies</h2>
-                <p>
-                    <ul>
-                        <li>Taekwondo</li>
-                        <li>Reparacion de dispositivos electronicos</li>
-                        <li>Voley</li>
-                        <li>Ciclismo</li>
-                    </ul>
-                </p>
-                <hr>
+
+            <div class="card">
+                <h3>Más</h3>
+                <p>Próximamente más proyectos</p>
             </div>
-            <div>
-                <form>
-                    <h2><label>Contacto</label></h2>
-                    Nombre <input type="text" placeholder="Ingrese su nombre"><br>
-                    Email <input type="email" placeholder="Ingrese su Email"><br>
-                    Mensaje <br><textarea placeholder="Ingrese su mensaje"></textarea><br>
-                    <button>Enviar</button>
-                </form>
-                <hr>
-            </div>
-            <div>
-                <h2>Enlaces</h2>
-                <p>
-                    Mi <a href="https://www.linkedin.com/in/leandro-feraut-39699038b/">Linkedin</a><br>
-                    Mi <a href="https://github.com/Licha201X" target="_blank">GitHub</a>
-                </p>
-                <hr>
-            </div>
-            <div>
-                <h2>Imganes</h2>
-                <img src="https://i.blogs.es/ed3587/photo-1624953587687-daf255b6b80a/450_1000.webp" alt="Python">
-                <img src="./imgenes/images.jfif" alt="Max Verstappen piloto de F1">
-                <hr>
-            </div>
-        </section>
-        <footer>Este es el footer de la pagina hecha para el TP Web 1</footer>
-    </main>
+        </div>
+    </section>
+
+    <footer>
+        © 2026 - Licha | Hecho con HTML y CSS
+    </footer>
+
 </body>
 </html>
